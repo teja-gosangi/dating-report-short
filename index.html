@@ -535,10 +535,39 @@
     }
   }
 
-  .split-col {
-    padding-top: 28px;
-    border-top: 1px solid rgba(250, 245, 235, 0.35);
-    text-align: left;
+  .split-col { text-align: left; }
+
+  .pov-card {
+    border-radius: 18px;
+    padding: 26px 22px;
+    border: 1px solid rgba(26, 26, 26, 0.12);
+    background: var(--cream);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  }
+
+  .pov-card.her {
+    background: var(--pink-tint);
+    border-color: rgba(184, 8, 73, 0.14);
+  }
+
+  .pov-card.him {
+    background: var(--yellow);
+    border-color: rgba(26, 26, 26, 0.10);
+  }
+
+  .pov-card .split-label { color: var(--ink); }
+  .pov-card .split-list li { color: var(--ink-soft); opacity: 1; }
+  .pov-card .split-list li::before { color: var(--ink-soft); opacity: 0.7; }
+
+  .hero .sub-hero {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: clamp(18px, 2.2vw, 28px);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    display: inline-block;
+    margin-top: 18px;
+    opacity: 0.9;
   }
 
   .split-label {
@@ -668,12 +697,49 @@
   }
 
   @media (max-width: 480px) {
-    .slide { padding: 32px 24px; }
-    .slide-body { padding: 24px 0; }
+    .slide { padding: 28px 20px; }
+    .slide-body { padding: 18px 0; }
     .no-item { grid-template-columns: 40px 1fr; gap: 16px; }
     .take-item { grid-template-columns: 48px 1fr; gap: 16px; }
     .eyebrow::before,
     .eyebrow::after { width: 18px; }
+
+    /* Slide 2 (Verdict) */
+    .verdict-grid { margin-top: 28px; }
+    .verdict-cell { padding: 18px 0; }
+    .verdict-number { font-size: clamp(56px, 18vw, 92px); }
+    .verdict-label { font-size: 13px; margin-top: 10px; }
+    .verdict-sublabel { font-size: 13px; margin-top: 6px; }
+
+    /* Slide 7 (Bars) */
+    .bars { margin-top: 28px; gap: 14px; }
+    .bar-row { gap: 12px; }
+    .bar-percent { font-size: clamp(18px, 5vw, 22px); }
+    .bar-track { height: 5px; }
+
+    /* Slide 9 (No list) */
+    .no-list { margin-top: 22px; }
+    .no-item { padding: 16px 0; }
+    .no-num { font-size: 22px; }
+    .no-title { font-size: 19px; }
+    .no-desc { font-size: 14px; }
+
+    /* Slide 10 (Asymmetry) */
+    .split { margin-top: 26px; gap: 12px; grid-template-columns: 1fr 1fr; }
+    .pov-card { padding: 16px 12px; border-radius: 16px; }
+    .split-label { font-size: 16px; margin-bottom: 12px; }
+    .split-list { gap: 10px; }
+    .split-list li { font-size: 13px; line-height: 1.35; padding-left: 16px; }
+  }
+
+  /* Extra squeeze for short mobile viewports */
+  @media (max-height: 740px) and (max-width: 480px) {
+    .slide { padding: 24px 18px; }
+    .slide-body { padding: 14px 0; }
+    .verdict-number { font-size: clamp(52px, 17vw, 86px); }
+    .bars { margin-top: 22px; gap: 12px; }
+    .no-item { padding: 14px 0; }
+    .split { margin-top: 22px; }
   }
 
   /* Keyboard + accessibility */
@@ -927,9 +993,7 @@
 
     <div class="maybe-chips">
       <span class="chip">Spark anxiety</span>
-      <span class="chip">Hedging their yes</span>
       <span class="chip">One specific concern</span>
-      <span class="chip">Logistics</span>
       <span class="chip">Too soon to tell</span>
     </div>
   </main>
@@ -1003,24 +1067,28 @@
 
     <div class="split">
       <div class="split-col">
-        <div class="split-label">How she remembers it</div>
-        <ul class="split-list">
-          <li>He didn't ask about me</li>
-          <li>It felt like networking</li>
-          <li>He was on his phone</li>
-          <li>No emotional warmth</li>
-          <li>Talked about his ex</li>
-        </ul>
+        <div class="pov-card her">
+          <div class="split-label">How she remembers it</div>
+          <ul class="split-list">
+            <li>He didn't ask about me</li>
+            <li>It felt like networking</li>
+            <li>He was on his phone</li>
+            <li>No emotional warmth</li>
+            <li>Talked about his ex</li>
+          </ul>
+        </div>
       </div>
       <div class="split-col">
-        <div class="split-label">How he remembers it</div>
-        <ul class="split-list">
-          <li>No spark or chemistry</li>
-          <li>Didn't feel attraction</li>
-          <li>Conversations were boring</li>
-          <li>She wasn't speaking much</li>
-          <li>Friendly, not romantic</li>
-        </ul>
+        <div class="pov-card him">
+          <div class="split-label">How he remembers it</div>
+          <ul class="split-list">
+            <li>No spark or chemistry</li>
+            <li>Didn't feel attraction</li>
+            <li>Conversations were boring</li>
+            <li>She wasn't speaking much</li>
+            <li>Friendly, not romantic</li>
+          </ul>
+        </div>
       </div>
     </div>
   </main>
@@ -1082,7 +1150,7 @@
 
   <main class="slide-body">
     <div class="eyebrow">Ready?</div>
-    <h2 class="hero">Stop swiping.<br><em>Start something real.</em></h2>
+    <h2 class="hero">Curated. Intentional.<br><span class="sub-hero">The way dating should've been all along.</span></h2>
 
     <div class="cta-actions">
       <a href="https://signup.meant2bae.com" class="btn btn-primary">Get started <span class="btn-arrow">→</span></a>
