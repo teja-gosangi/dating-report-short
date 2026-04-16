@@ -119,13 +119,16 @@
     opacity: 1;
   }
 
-  .slide-marker { color: rgba(26, 26, 26, 0.55); }
-  .bg-pink .slide-marker { color: rgba(250, 245, 235, 0.8); }
-
   .brand {
     display: flex;
     align-items: center;
     gap: 8px;
+  }
+
+  .brand-link {
+    display: inline-flex;
+    align-items: center;
+    line-height: 0;
   }
 
   .brand-logo {
@@ -328,7 +331,7 @@
   .verdict-number {
     font-family: 'Playfair Display', serif;
     font-weight: 500;
-    font-size: clamp(80px, 13vw, 140px);
+    font-size: clamp(76px, 12.5vw, 132px);
     line-height: 1;
     letter-spacing: -0.04em;
     color: var(--cream);
@@ -765,6 +768,10 @@
     outline-offset: 4px;
   }
 
+  .brand-link:focus-visible {
+    border-radius: 10px;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     html, body { scroll-behavior: auto; }
     body { scroll-snap-type: none; }
@@ -781,10 +788,11 @@
 <section class="slide bg-pink-tint" id="slide-1">
   <header class="slide-header">
     <div class="brand">
-      <img class="brand-logo" src="./logo.png" alt="Meant2Bae">
+      <a class="brand-link" href="https://meant2bae.com" aria-label="Meant2Bae home">
+        <img class="brand-logo" src="./logo.png" alt="Meant2Bae">
+      </a>
       <span class="sr-only">MEANT2BAE</span>
     </div>
-    <div class="slide-marker" aria-label="Page 1 of 12">01 / 12</div>
   </header>
 
   <main class="slide-body">
@@ -803,10 +811,11 @@
 <section class="slide bg-pink">
   <header class="slide-header">
     <div class="brand">
-      <img class="brand-logo" src="./logo2.png" alt="Meant2Bae">
+      <a class="brand-link" href="https://meant2bae.com" aria-label="Meant2Bae home">
+        <img class="brand-logo" src="./logo2.png" alt="Meant2Bae">
+      </a>
       <span class="sr-only">MEANT2BAE</span>
     </div>
-    <div class="slide-marker" aria-label="Page 2 of 12">02 / 12</div>
   </header>
 
   <main class="slide-body">
@@ -841,10 +850,11 @@
 <section class="slide bg-peach">
   <header class="slide-header">
     <div class="brand">
-      <img class="brand-logo" src="./logo.png" alt="Meant2Bae">
+      <a class="brand-link" href="https://meant2bae.com" aria-label="Meant2Bae home">
+        <img class="brand-logo" src="./logo.png" alt="Meant2Bae">
+      </a>
       <span class="sr-only">MEANT2BAE</span>
     </div>
-    <div class="slide-marker" aria-label="Page 3 of 12">03 / 12</div>
   </header>
 
   <main class="slide-body">
@@ -862,10 +872,11 @@
 <section class="slide bg-blue">
   <header class="slide-header">
     <div class="brand">
-      <img class="brand-logo" src="./logo.png" alt="Meant2Bae">
+      <a class="brand-link" href="https://meant2bae.com" aria-label="Meant2Bae home">
+        <img class="brand-logo" src="./logo.png" alt="Meant2Bae">
+      </a>
       <span class="sr-only">MEANT2BAE</span>
     </div>
-    <div class="slide-marker" aria-label="Page 4 of 12">04 / 12</div>
   </header>
 
   <main class="slide-body">
@@ -881,13 +892,14 @@
 </section>
 
 <!-- SLIDE 5: TREND 03 — BANGALORE -->
-<section class="slide bg-purple">
+<section class="slide bg-yellow">
   <header class="slide-header">
     <div class="brand">
-      <img class="brand-logo" src="./logo.png" alt="Meant2Bae">
+      <a class="brand-link" href="https://meant2bae.com" aria-label="Meant2Bae home">
+        <img class="brand-logo" src="./logo.png" alt="Meant2Bae">
+      </a>
       <span class="sr-only">MEANT2BAE</span>
     </div>
-    <div class="slide-marker" aria-label="Page 5 of 12">05 / 12</div>
   </header>
 
   <main class="slide-body">
@@ -902,13 +914,14 @@
 </section>
 
 <!-- SLIDE 6: TREND 04 — MAYBE IS HONEST -->
-<section class="slide bg-yellow">
+<section class="slide bg-purple">
   <header class="slide-header">
     <div class="brand">
-      <img class="brand-logo" src="./logo.png" alt="Meant2Bae">
+      <a class="brand-link" href="https://meant2bae.com" aria-label="Meant2Bae home">
+        <img class="brand-logo" src="./logo.png" alt="Meant2Bae">
+      </a>
       <span class="sr-only">MEANT2BAE</span>
     </div>
-    <div class="slide-marker" aria-label="Page 6 of 12">06 / 12</div>
   </header>
 
   <main class="slide-body">
@@ -926,10 +939,11 @@
 <section class="slide bg-mint">
   <header class="slide-header">
     <div class="brand">
-      <img class="brand-logo" src="./logo.png" alt="Meant2Bae">
+      <a class="brand-link" href="https://meant2bae.com" aria-label="Meant2Bae home">
+        <img class="brand-logo" src="./logo.png" alt="Meant2Bae">
+      </a>
       <span class="sr-only">MEANT2BAE</span>
     </div>
-    <div class="slide-marker" aria-label="Page 7 of 12">07 / 12</div>
   </header>
 
   <main class="slide-body">
@@ -979,10 +993,11 @@
 <section class="slide bg-yellow">
   <header class="slide-header">
     <div class="brand">
-      <img class="brand-logo" src="./logo.png" alt="Meant2Bae">
+      <a class="brand-link" href="https://meant2bae.com" aria-label="Meant2Bae home">
+        <img class="brand-logo" src="./logo.png" alt="Meant2Bae">
+      </a>
       <span class="sr-only">MEANT2BAE</span>
     </div>
-    <div class="slide-marker" aria-label="Page 8 of 12">08 / 12</div>
   </header>
 
   <main class="slide-body">
@@ -998,19 +1013,17 @@
     </div>
   </main>
 
-  <footer class="slide-footer-bar">
-    <div class="left"><em style="font-family:'Playfair Display',serif;">"I don't know yet"</em> is a surprisingly honest answer in a culture that doesn't reward it.</div>
-  </footer>
 </section>
 
 <!-- SLIDE 9: NO -->
 <section class="slide bg-cream">
   <header class="slide-header">
     <div class="brand">
-      <img class="brand-logo" src="./logo.png" alt="Meant2Bae">
+      <a class="brand-link" href="https://meant2bae.com" aria-label="Meant2Bae home">
+        <img class="brand-logo" src="./logo.png" alt="Meant2Bae">
+      </a>
       <span class="sr-only">MEANT2BAE</span>
     </div>
-    <div class="slide-marker" aria-label="Page 9 of 12">09 / 12</div>
   </header>
 
   <main class="slide-body">
@@ -1023,7 +1036,7 @@
         <div class="no-num">01</div>
         <div>
           <div class="no-title">The one-sided conversation</div>
-          <div class="no-desc">Questions aren't asked back. Topics die on arrival. It's not about charisma — it's reciprocity.</div>
+          <div class="no-desc">Making the date a monologue and not reciprocating.</div>
         </div>
       </div>
       <div class="no-item">
@@ -1044,7 +1057,7 @@
         <div class="no-num">04</div>
         <div>
           <div class="no-title">The ex factor</div>
-          <div class="no-desc">Talking about an ex — unprompted, at length, negatively. Reads as unresolved baggage.</div>
+          <div class="no-desc">Talking about an ex — unprompted, at length, negatively.</div>
         </div>
       </div>
     </div>
@@ -1055,10 +1068,11 @@
 <section class="slide bg-pink">
   <header class="slide-header">
     <div class="brand">
-      <img class="brand-logo" src="./logo2.png" alt="Meant2Bae">
+      <a class="brand-link" href="https://meant2bae.com" aria-label="Meant2Bae home">
+        <img class="brand-logo" src="./logo2.png" alt="Meant2Bae">
+      </a>
       <span class="sr-only">MEANT2BAE</span>
     </div>
-    <div class="slide-marker" aria-label="Page 10 of 12">10 / 12</div>
   </header>
 
   <main class="slide-body">
@@ -1102,14 +1116,15 @@
 <section class="slide bg-mint">
   <header class="slide-header">
     <div class="brand">
-      <img class="brand-logo" src="./logo.png" alt="Meant2Bae">
+      <a class="brand-link" href="https://meant2bae.com" aria-label="Meant2Bae home">
+        <img class="brand-logo" src="./logo.png" alt="Meant2Bae">
+      </a>
       <span class="sr-only">MEANT2BAE</span>
     </div>
-    <div class="slide-marker" aria-label="Page 11 of 12">11 / 12</div>
   </header>
 
   <main class="slide-body">
-    <div class="eyebrow">The Takeaway</div>
+    <div class="eyebrow">The Takeaways</div>
     <h2 class="trend">What 200+ first dates <em>taught us.</em></h2>
 
     <div class="takeaways">
@@ -1117,21 +1132,21 @@
         <div class="take-num">01</div>
         <div>
           <div class="take-title">Ask follow-ups.</div>
-          <div class="take-body">Not interview questions. Real ones. Then listen, and go deeper. It's the single biggest differentiator between a Yes and a No.</div>
+          <div class="take-body">Ask real questions, not interview ones. Listen and build on it.</div>
         </div>
       </div>
       <div class="take-item">
         <div class="take-num">02</div>
         <div>
           <div class="take-title">Stop performing. Be there.</div>
-          <div class="take-body">The best dates weren't the most impressive. They were the most comfortable. Stop trying to win the date and start being present in it.</div>
+          <div class="take-body">The best dates weren't the most impressive. They were the most comfortable.</div>
         </div>
       </div>
       <div class="take-item">
         <div class="take-num">03</div>
         <div>
-          <div class="take-title">The small things are the big things.</div>
-          <div class="take-body">Punctuality. Grooming. Knowing their name. Being kind to the waiter. These aren't bonuses. They're the floor.</div>
+          <div class="take-title">Small things are big things.</div>
+          <div class="take-body">Punctuality. Grooming. Knowing their name. Being kind to the waiter.</div>
         </div>
       </div>
     </div>
@@ -1142,10 +1157,11 @@
 <section class="slide bg-pink">
   <header class="slide-header">
     <div class="brand">
-      <img class="brand-logo" src="./logo2.png" alt="Meant2Bae">
+      <a class="brand-link" href="https://meant2bae.com" aria-label="Meant2Bae home">
+        <img class="brand-logo" src="./logo2.png" alt="Meant2Bae">
+      </a>
       <span class="sr-only">MEANT2BAE</span>
     </div>
-    <div class="slide-marker" aria-label="Page 12 of 12">12 / 12</div>
   </header>
 
   <main class="slide-body">
@@ -1154,7 +1170,6 @@
 
     <div class="cta-actions">
       <a href="https://signup.meant2bae.com" class="btn btn-primary">Get started <span class="btn-arrow">→</span></a>
-      <a href="https://m2b-indian-dating-full-report.vercel.app/" class="btn btn-ghost">Read the full report <span class="btn-arrow">→</span></a>
     </div>
   </main>
 
