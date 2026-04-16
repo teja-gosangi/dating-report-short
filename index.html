@@ -707,6 +707,11 @@
     .eyebrow::before,
     .eyebrow::after { width: 18px; }
 
+    /* Header logo: hide on mobile except cover slide */
+    .slide-header .brand { display: none; }
+    #slide-1 .slide-header { justify-content: center; }
+    #slide-1 .slide-header .brand { display: flex; }
+
     /* Slide 2 (Verdict) */
     .verdict-grid { margin-top: 28px; }
     .verdict-cell { padding: 18px 0; }
