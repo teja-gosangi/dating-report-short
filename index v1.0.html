@@ -119,16 +119,13 @@
     opacity: 1;
   }
 
+  .slide-marker { color: rgba(26, 26, 26, 0.55); }
+  .bg-pink .slide-marker { color: rgba(250, 245, 235, 0.8); }
+
   .brand {
     display: flex;
     align-items: center;
     gap: 8px;
-  }
-
-  .brand-link {
-    display: inline-flex;
-    align-items: center;
-    line-height: 0;
   }
 
   .brand-logo {
@@ -331,7 +328,7 @@
   .verdict-number {
     font-family: 'Playfair Display', serif;
     font-weight: 500;
-    font-size: clamp(76px, 12.5vw, 132px);
+    font-size: clamp(80px, 13vw, 140px);
     line-height: 1;
     letter-spacing: -0.04em;
     color: var(--cream);
@@ -355,11 +352,6 @@
     opacity: 0.75;
     margin-top: 8px;
     line-height: 1.35;
-  }
-
-  .verdict-sublabel.light {
-    color: var(--ink-soft);
-    opacity: 0.85;
   }
 
   /* Curiosity callout */
@@ -467,16 +459,15 @@
   }
 
   .chip {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-size: 15px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 13px;
     font-weight: 500;
     padding: 9px 16px;
-    border: 1px solid rgba(26, 26, 26, 0.18);
+    border: 1px solid rgba(26, 26, 26, 0.2);
     border-radius: 999px;
     color: var(--ink-soft);
-    background: rgba(255, 255, 255, 0.55);
-    letter-spacing: 0.01em;
+    background: rgba(255, 255, 255, 0.5);
+    letter-spacing: 0.02em;
   }
 
   /* No list */
@@ -544,39 +535,10 @@
     }
   }
 
-  .split-col { text-align: left; }
-
-  .pov-card {
-    border-radius: 18px;
-    padding: 26px 22px;
-    border: 1px solid rgba(26, 26, 26, 0.12);
-    background: var(--cream);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
-  }
-
-  .pov-card.her {
-    background: var(--pink-tint);
-    border-color: rgba(184, 8, 73, 0.14);
-  }
-
-  .pov-card.him {
-    background: var(--yellow);
-    border-color: rgba(26, 26, 26, 0.10);
-  }
-
-  .pov-card .split-label { color: var(--ink); }
-  .pov-card .split-list li { color: var(--ink-soft); opacity: 1; }
-  .pov-card .split-list li::before { color: var(--ink-soft); opacity: 0.7; }
-
-  .hero .sub-hero {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-size: clamp(18px, 2.2vw, 28px);
-    line-height: 1.2;
-    letter-spacing: -0.01em;
-    display: inline-block;
-    margin-top: 18px;
-    opacity: 0.9;
+  .split-col {
+    padding-top: 28px;
+    border-top: 1px solid rgba(250, 245, 235, 0.35);
+    text-align: left;
   }
 
   .split-label {
@@ -706,54 +668,12 @@
   }
 
   @media (max-width: 480px) {
-    .slide { padding: 28px 20px; }
-    .slide-body { padding: 18px 0; }
+    .slide { padding: 32px 24px; }
+    .slide-body { padding: 24px 0; }
     .no-item { grid-template-columns: 40px 1fr; gap: 16px; }
     .take-item { grid-template-columns: 48px 1fr; gap: 16px; }
     .eyebrow::before,
     .eyebrow::after { width: 18px; }
-
-    /* Header logo: hide on mobile except cover slide */
-    .slide-header .brand { display: none; }
-    #slide-1 .slide-header { justify-content: center; }
-    #slide-1 .slide-header .brand { display: flex; }
-
-    /* Slide 2 (Verdict) */
-    .verdict-grid { margin-top: 28px; }
-    .verdict-cell { padding: 18px 0; }
-    .verdict-number { font-size: clamp(56px, 18vw, 92px); }
-    .verdict-label { font-size: 13px; margin-top: 10px; }
-    .verdict-sublabel { font-size: 13px; margin-top: 6px; }
-
-    /* Slide 7 (Bars) */
-    .bars { margin-top: 28px; gap: 14px; }
-    .bar-row { gap: 12px; }
-    .bar-percent { font-size: clamp(18px, 5vw, 22px); }
-    .bar-track { height: 5px; }
-
-    /* Slide 9 (No list) */
-    .no-list { margin-top: 22px; }
-    .no-item { padding: 16px 0; }
-    .no-num { font-size: 22px; }
-    .no-title { font-size: 19px; }
-    .no-desc { font-size: 14px; }
-
-    /* Slide 10 (Asymmetry) */
-    .split { margin-top: 26px; gap: 12px; grid-template-columns: 1fr 1fr; }
-    .pov-card { padding: 16px 12px; border-radius: 16px; }
-    .split-label { font-size: 16px; margin-bottom: 12px; }
-    .split-list { gap: 10px; }
-    .split-list li { font-size: 13px; line-height: 1.35; padding-left: 16px; }
-  }
-
-  /* Extra squeeze for short mobile viewports */
-  @media (max-height: 740px) and (max-width: 480px) {
-    .slide { padding: 24px 18px; }
-    .slide-body { padding: 14px 0; }
-    .verdict-number { font-size: clamp(52px, 17vw, 86px); }
-    .bars { margin-top: 22px; gap: 12px; }
-    .no-item { padding: 14px 0; }
-    .split { margin-top: 22px; }
   }
 
   /* Keyboard + accessibility */
@@ -779,10 +699,6 @@
     outline-offset: 4px;
   }
 
-  .brand-link:focus-visible {
-    border-radius: 10px;
-  }
-
   @media (prefers-reduced-motion: reduce) {
     html, body { scroll-behavior: auto; }
     body { scroll-snap-type: none; }
@@ -799,11 +715,10 @@
 <section class="slide bg-pink-tint" id="slide-1">
   <header class="slide-header">
     <div class="brand">
-      <a class="brand-link" href="https://meant2bae.com" aria-label="Meant2Bae home">
-        <img class="brand-logo" src="https://dating-report-short.vercel.app/logo.png" alt="Meant2Bae">
-      </a>
+      <img class="brand-logo" src="https://dating-report-short.vercel.app/logo.png" alt="Meant2Bae">
       <span class="sr-only">MEANT2BAE</span>
     </div>
+    <div class="slide-marker" aria-label="Page 1 of 12">01 / 12</div>
   </header>
 
   <main class="slide-body">
@@ -822,11 +737,10 @@
 <section class="slide bg-pink">
   <header class="slide-header">
     <div class="brand">
-      <a class="brand-link" href="https://meant2bae.com" aria-label="Meant2Bae home">
-        <img class="brand-logo" src="https://dating-report-short.vercel.app/logo2.png" alt="Meant2Bae">
-      </a>
+      <img class="brand-logo" src="https://dating-report-short.vercel.app/logo2.png" alt="Meant2Bae">
       <span class="sr-only">MEANT2BAE</span>
     </div>
+    <div class="slide-marker" aria-label="Page 2 of 12">02 / 12</div>
   </header>
 
   <main class="slide-body">
@@ -861,11 +775,10 @@
 <section class="slide bg-peach">
   <header class="slide-header">
     <div class="brand">
-      <a class="brand-link" href="https://meant2bae.com" aria-label="Meant2Bae home">
-        <img class="brand-logo" src="https://dating-report-short.vercel.app/logo.png" alt="Meant2Bae">
-      </a>
+      <img class="brand-logo" src="https://dating-report-short.vercel.app/logo.png" alt="Meant2Bae">
       <span class="sr-only">MEANT2BAE</span>
     </div>
+    <div class="slide-marker" aria-label="Page 3 of 12">03 / 12</div>
   </header>
 
   <main class="slide-body">
@@ -883,16 +796,15 @@
 <section class="slide bg-blue">
   <header class="slide-header">
     <div class="brand">
-      <a class="brand-link" href="https://meant2bae.com" aria-label="Meant2Bae home">
-        <img class="brand-logo" src="https://dating-report-short.vercel.app/logo.png" alt="Meant2Bae">
-      </a>
+      <img class="brand-logo" src="https://dating-report-short.vercel.app/logo.png" alt="Meant2Bae">
       <span class="sr-only">MEANT2BAE</span>
     </div>
+    <div class="slide-marker" aria-label="Page 4 of 12">04 / 12</div>
   </header>
 
   <main class="slide-body">
-    <div class="eyebrow">Trend 02 · The Insight</div>
-    <h2 class="trend">Curiosity is <em>attractiveness.</em></h2>
+    <div class="eyebrow">Trend 02 · The Pattern</div>
+    <h2 class="trend">Curiosity is the <em>new attractiveness.</em></h2>
     <p class="lead">Being interested beats being impressive. The single biggest driver of a second date isn't how you look — it's whether you seem genuinely curious about the person across from you.</p>
 
     <div class="trend-stat-callout">
@@ -903,14 +815,13 @@
 </section>
 
 <!-- SLIDE 5: TREND 03 — BANGALORE -->
-<section class="slide bg-yellow">
+<section class="slide bg-purple">
   <header class="slide-header">
     <div class="brand">
-      <a class="brand-link" href="https://meant2bae.com" aria-label="Meant2Bae home">
-        <img class="brand-logo" src="https://dating-report-short.vercel.app/logo.png" alt="Meant2Bae">
-      </a>
+      <img class="brand-logo" src="https://dating-report-short.vercel.app/logo.png" alt="Meant2Bae">
       <span class="sr-only">MEANT2BAE</span>
     </div>
+    <div class="slide-marker" aria-label="Page 5 of 12">05 / 12</div>
   </header>
 
   <main class="slide-body">
@@ -925,14 +836,13 @@
 </section>
 
 <!-- SLIDE 6: TREND 04 — MAYBE IS HONEST -->
-<section class="slide bg-purple">
+<section class="slide bg-yellow">
   <header class="slide-header">
     <div class="brand">
-      <a class="brand-link" href="https://meant2bae.com" aria-label="Meant2Bae home">
-        <img class="brand-logo" src="https://dating-report-short.vercel.app/logo.png" alt="Meant2Bae">
-      </a>
+      <img class="brand-logo" src="https://dating-report-short.vercel.app/logo.png" alt="Meant2Bae">
       <span class="sr-only">MEANT2BAE</span>
     </div>
+    <div class="slide-marker" aria-label="Page 6 of 12">06 / 12</div>
   </header>
 
   <main class="slide-body">
@@ -950,11 +860,10 @@
 <section class="slide bg-mint">
   <header class="slide-header">
     <div class="brand">
-      <a class="brand-link" href="https://meant2bae.com" aria-label="Meant2Bae home">
-        <img class="brand-logo" src="https://dating-report-short.vercel.app/logo.png" alt="Meant2Bae">
-      </a>
+      <img class="brand-logo" src="https://dating-report-short.vercel.app/logo.png" alt="Meant2Bae">
       <span class="sr-only">MEANT2BAE</span>
     </div>
+    <div class="slide-marker" aria-label="Page 7 of 12">07 / 12</div>
   </header>
 
   <main class="slide-body">
@@ -1004,11 +913,10 @@
 <section class="slide bg-yellow">
   <header class="slide-header">
     <div class="brand">
-      <a class="brand-link" href="https://meant2bae.com" aria-label="Meant2Bae home">
-        <img class="brand-logo" src="https://dating-report-short.vercel.app/logo.png" alt="Meant2Bae">
-      </a>
+      <img class="brand-logo" src="https://dating-report-short.vercel.app/logo.png" alt="Meant2Bae">
       <span class="sr-only">MEANT2BAE</span>
     </div>
+    <div class="slide-marker" aria-label="Page 8 of 12">08 / 12</div>
   </header>
 
   <main class="slide-body">
@@ -1017,24 +925,28 @@
     <h2 class="trend" style="margin-top: 8px;">weren't ready for <em>a binary call.</em></h2>
     <p class="body-md">Most Maybe responses describe someone pleasant, respectful, well-matched. The date was fine. And fine wasn't enough to say Yes — but it wasn't wrong enough to say No.</p>
 
-    <div class="maybe-chips" aria-label="Common reasons for Maybe">
+    <div class="maybe-chips">
       <span class="chip">Spark anxiety</span>
+      <span class="chip">Hedging their yes</span>
       <span class="chip">One specific concern</span>
+      <span class="chip">Logistics</span>
       <span class="chip">Too soon to tell</span>
     </div>
   </main>
 
+  <footer class="slide-footer-bar">
+    <div class="left"><em style="font-family:'Playfair Display',serif;">"I don't know yet"</em> is a surprisingly honest answer in a culture that doesn't reward it.</div>
+  </footer>
 </section>
 
 <!-- SLIDE 9: NO -->
 <section class="slide bg-cream">
   <header class="slide-header">
     <div class="brand">
-      <a class="brand-link" href="https://meant2bae.com" aria-label="Meant2Bae home">
-        <img class="brand-logo" src="https://dating-report-short.vercel.app/logo.png" alt="Meant2Bae">
-      </a>
+      <img class="brand-logo" src="https://dating-report-short.vercel.app/logo.png" alt="Meant2Bae">
       <span class="sr-only">MEANT2BAE</span>
     </div>
+    <div class="slide-marker" aria-label="Page 9 of 12">09 / 12</div>
   </header>
 
   <main class="slide-body">
@@ -1047,7 +959,7 @@
         <div class="no-num">01</div>
         <div>
           <div class="no-title">The one-sided conversation</div>
-          <div class="no-desc">Making the date a monologue and not reciprocating.</div>
+          <div class="no-desc">Questions aren't asked back. Topics die on arrival. It's not about charisma — it's reciprocity.</div>
         </div>
       </div>
       <div class="no-item">
@@ -1068,7 +980,7 @@
         <div class="no-num">04</div>
         <div>
           <div class="no-title">The ex factor</div>
-          <div class="no-desc">Talking about an ex — unprompted, at length, negatively.</div>
+          <div class="no-desc">Talking about an ex — unprompted, at length, negatively. Reads as unresolved baggage.</div>
         </div>
       </div>
     </div>
@@ -1079,11 +991,10 @@
 <section class="slide bg-pink">
   <header class="slide-header">
     <div class="brand">
-      <a class="brand-link" href="https://meant2bae.com" aria-label="Meant2Bae home">
-        <img class="brand-logo" src="https://dating-report-short.vercel.app/logo2.png" alt="Meant2Bae">
-      </a>
+      <img class="brand-logo" src="https://dating-report-short.vercel.app/logo2.png" alt="Meant2Bae">
       <span class="sr-only">MEANT2BAE</span>
     </div>
+    <div class="slide-marker" aria-label="Page 10 of 12">10 / 12</div>
   </header>
 
   <main class="slide-body">
@@ -1092,28 +1003,24 @@
 
     <div class="split">
       <div class="split-col">
-        <div class="pov-card her">
-          <div class="split-label">How she remembers it</div>
-          <ul class="split-list">
-            <li>He didn't ask about me</li>
-            <li>It felt like networking</li>
-            <li>He was on his phone</li>
-            <li>No emotional warmth</li>
-            <li>Talked about his ex</li>
-          </ul>
-        </div>
+        <div class="split-label">How she remembers it</div>
+        <ul class="split-list">
+          <li>He didn't ask about me</li>
+          <li>It felt like networking</li>
+          <li>He was on his phone</li>
+          <li>No emotional warmth</li>
+          <li>Talked about his ex</li>
+        </ul>
       </div>
       <div class="split-col">
-        <div class="pov-card him">
-          <div class="split-label">How he remembers it</div>
-          <ul class="split-list">
-            <li>No spark or chemistry</li>
-            <li>Didn't feel attraction</li>
-            <li>Conversations were boring</li>
-            <li>She wasn't speaking much</li>
-            <li>Friendly, not romantic</li>
-          </ul>
-        </div>
+        <div class="split-label">How he remembers it</div>
+        <ul class="split-list">
+          <li>No spark or chemistry</li>
+          <li>Didn't feel attraction</li>
+          <li>Conversations were boring</li>
+          <li>She wasn't speaking much</li>
+          <li>Friendly, not romantic</li>
+        </ul>
       </div>
     </div>
   </main>
@@ -1127,15 +1034,14 @@
 <section class="slide bg-mint">
   <header class="slide-header">
     <div class="brand">
-      <a class="brand-link" href="https://meant2bae.com" aria-label="Meant2Bae home">
-        <img class="brand-logo" src="https://dating-report-short.vercel.app/logo.png" alt="Meant2Bae">
-      </a>
+      <img class="brand-logo" src="https://dating-report-short.vercel.app/logo.png" alt="Meant2Bae">
       <span class="sr-only">MEANT2BAE</span>
     </div>
+    <div class="slide-marker" aria-label="Page 11 of 12">11 / 12</div>
   </header>
 
   <main class="slide-body">
-    <div class="eyebrow">The Takeaways</div>
+    <div class="eyebrow">The Takeaway</div>
     <h2 class="trend">What 200+ first dates <em>taught us.</em></h2>
 
     <div class="takeaways">
@@ -1143,21 +1049,21 @@
         <div class="take-num">01</div>
         <div>
           <div class="take-title">Ask follow-ups.</div>
-          <div class="take-body">Ask real questions, not interview ones. Listen and build on it.</div>
+          <div class="take-body">Not interview questions. Real ones. Then listen, and go deeper. It's the single biggest differentiator between a Yes and a No.</div>
         </div>
       </div>
       <div class="take-item">
         <div class="take-num">02</div>
         <div>
           <div class="take-title">Stop performing. Be there.</div>
-          <div class="take-body">The best dates weren't the most impressive. They were the most comfortable.</div>
+          <div class="take-body">The best dates weren't the most impressive. They were the most comfortable. Stop trying to win the date and start being present in it.</div>
         </div>
       </div>
       <div class="take-item">
         <div class="take-num">03</div>
         <div>
-          <div class="take-title">Small things are big things.</div>
-          <div class="take-body">Punctuality. Grooming. Knowing their name. Being kind to the waiter.</div>
+          <div class="take-title">The small things are the big things.</div>
+          <div class="take-body">Punctuality. Grooming. Knowing their name. Being kind to the waiter. These aren't bonuses. They're the floor.</div>
         </div>
       </div>
     </div>
@@ -1168,19 +1074,19 @@
 <section class="slide bg-pink">
   <header class="slide-header">
     <div class="brand">
-      <a class="brand-link" href="https://meant2bae.com" aria-label="Meant2Bae home">
-        <img class="brand-logo" src="https://dating-report-short.vercel.app/logo2.png" alt="Meant2Bae">
-      </a>
+      <img class="brand-logo" src="https://dating-report-short.vercel.app/logo2.png" alt="Meant2Bae">
       <span class="sr-only">MEANT2BAE</span>
     </div>
+    <div class="slide-marker" aria-label="Page 12 of 12">12 / 12</div>
   </header>
 
   <main class="slide-body">
     <div class="eyebrow">Ready?</div>
-    <h2 class="hero">Curated. Intentional.<br><span class="sub-hero">The way dating should've been all along.</span></h2>
+    <h2 class="hero">Stop swiping.<br><em>Start something real.</em></h2>
 
     <div class="cta-actions">
       <a href="https://signup.meant2bae.com" class="btn btn-primary">Get started <span class="btn-arrow">→</span></a>
+      <a href="https://m2b-indian-dating-full-report.vercel.app/" class="btn btn-ghost">Read the full report <span class="btn-arrow">→</span></a>
     </div>
   </main>
 
