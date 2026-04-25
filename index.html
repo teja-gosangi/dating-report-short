@@ -357,22 +357,9 @@
     line-height: 1.35;
   }
 
-  /* Verdict-style sublabels on light backgrounds */
-  .sub-labels {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    margin-top: 28px;
-  }
-
-  .sub-label {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-size: 15px;
+  .verdict-sublabel.light {
     color: var(--ink-soft);
     opacity: 0.85;
-    line-height: 1.35;
   }
 
   /* Curiosity callout */
@@ -1029,11 +1016,7 @@
     <h2 class="trend" style="margin-top: 8px;">weren't ready for <em>a binary call.</em></h2>
     <p class="body-md">Most Maybe responses describe someone pleasant, respectful, well-matched. The date was fine. And fine wasn't enough to say Yes — but it wasn't wrong enough to say No.</p>
 
-    <div class="sub-labels" aria-label="Common reasons for Maybe">
-      <div class="sub-label">spark anxiety</div>
-      <div class="sub-label">one specific concern</div>
-      <div class="sub-label">too soon to tell</div>
-    </div>
+    <div class="verdict-sublabel light" aria-label="Common reasons for Maybe">spark anxiety · one specific concern · too soon to tell</div>
   </main>
 
 </section>
