@@ -545,6 +545,7 @@
     margin-top: 56px;
     width: 100%;
     max-width: 1000px;
+    align-items: stretch;
   }
 
   @media (min-width: 700px) {
@@ -554,7 +555,10 @@
     }
   }
 
-  .split-col { text-align: left; }
+  .split-col {
+    text-align: left;
+    display: flex;
+  }
 
   .pov-card {
     border-radius: 18px;
@@ -562,6 +566,9 @@
     border: 1px solid rgba(26, 26, 26, 0.12);
     background: var(--cream);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
   }
 
   .pov-card.her {
