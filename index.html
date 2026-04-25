@@ -724,6 +724,10 @@
     .verdict-number { font-size: clamp(56px, 18vw, 92px); }
     .verdict-label { font-size: 13px; margin-top: 10px; }
     .verdict-sublabel { font-size: 13px; margin-top: 6px; }
+    #slide-2 .slide-body { padding: 10px 0; }
+    #slide-2 .hero { font-size: clamp(34px, 9vw, 64px); }
+    #slide-2 .verdict-grid { margin-top: 18px; }
+    #slide-2 .slide-footer-bar { font-size: 13px; line-height: 1.45; }
 
     /* Slide 7 (Bars) */
     .bars { margin-top: 28px; gap: 14px; }
@@ -744,6 +748,10 @@
     .split-label { font-size: 16px; margin-bottom: 12px; }
     .split-list { gap: 10px; }
     .split-list li { font-size: 13px; line-height: 1.35; padding-left: 16px; }
+
+    /* Slide 4 (Trend 02) - center the stat label on mobile */
+    .trend-stat-callout { justify-content: center; }
+    .trend-stat-label { text-align: center; }
   }
 
   /* Extra squeeze for short mobile viewports */
@@ -819,7 +827,7 @@
 </section>
 
 <!-- SLIDE 2: VERDICT -->
-<section class="slide bg-pink">
+<section class="slide bg-pink" id="slide-2">
   <header class="slide-header">
     <div class="brand">
       <a class="brand-link" href="https://meant2bae.com" aria-label="Meant2Bae home">
