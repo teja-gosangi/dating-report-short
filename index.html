@@ -40,7 +40,12 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-FZCXLMDQYK');
+  gtag('config', 'G-FZCXLMDQYK', {
+    send_page_view: true,
+    page_title: document.title,
+    page_location: window.location.href,
+    page_path: window.location.pathname
+  });
 </script>
 
 <script type="application/ld+json">
@@ -734,6 +739,10 @@
     .slide-header .brand { display: none; }
     #slide-1 .slide-header { justify-content: center; }
     #slide-1 .slide-header .brand { display: flex; }
+
+    /* Also show logo on last (CTA) slide on mobile */
+    #slide-12 .slide-header { justify-content: center; }
+    #slide-12 .slide-header .brand { display: flex; }
 
     /* Slide 2 (Verdict) */
     .verdict-grid { margin-top: 28px; }
